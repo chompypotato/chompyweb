@@ -11,28 +11,16 @@
     .dropdown {
       margin: 1em 0;
     }
-    .dropdown button {
+    .dropdown a {
       background-color: #007BFF;
       color: white;
       padding: 10px 15px;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
       font-size: 16px;
     }
-    .dropdown button:hover {
+    .dropdown a:hover {
       background-color: #0056b3;
-    }
-    .dropdown-content {
-      display: none;
-      margin-top: 10px;
-      width: 100%;
-      height: 1000px;
-    
-    }
-    iframe {
-      border: none;
-      width: 100%;
-    height: 100%; 
     }
   </style>
 </head>
@@ -40,42 +28,19 @@
   <h1>chompyweb</h1>
 
   <div class="dropdown">
-    <button onclick="toggleDropdown('weather')">Weather App</button>
-    <div id="weather" class="dropdown-content">
-      <iframe src="https://weatherpotato.glitch.me"></iframe>
-    </div>
+    <a href="weather.html">Weather App</a>
   </div>
 
   <div class="dropdown">
-    <button onclick="toggleDropdown('chat')">Chat App</button>
-    <div id="chat" class="dropdown-content">
-      <iframe src="https://sclerenchyma.glitch.me"></iframe>
-    </div>
+    <a href="chat.html">Chat App</a>
   </div>
 
   <div class="dropdown">
-    <button onclick="toggleDropdown('games')">Games</button>
-    <div id="games" class="dropdown-content">
-      <iframe src="https://game-kingdom.glitch.me"></iframe>
-    </div>
+    <a href="games.html">Games</a>
   </div>
 
   <div class="dropdown">
-    <button onclick="toggleDropdown('emulator')">Emulator</button>
-    <div id="emulator" class="dropdown-content">
-      <iframe src="https://chompypotato.github.io/conky-nut"></iframe>
-    </div>
+    <a href="emulator.html">Emulator</a>
   </div>
-
-  <script>
-    function toggleDropdown(id) {
-      const content = document.getElementById(id);
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    }
-  </script>
 </body>
 </html>
