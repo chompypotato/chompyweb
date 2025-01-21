@@ -5,24 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chompyweb</title>
   <style>
-   
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .dropdown {
+      margin: 1em 0;
+    }
+    .dropdown button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .dropdown button:hover {
+      background-color: #0056b3;
+    }
+    .dropdown-content {
+      display: none;
+      margin-top: 10px;
+    }
+    iframe {
+      border: none;
+    }
   </style>
-
 </head>
 <body>
   <h1>chompyweb</h1>
 
-  <h2>Weather App</h2>
-  <iframe src="https://weatherpotato.glitch.me" width="600" height="400"></iframe>
+  <div class="dropdown">
+    <button onclick="toggleDropdown('weather')">Weather App</button>
+    <div id="weather" class="dropdown-content">
+      <iframe src="https://weatherpotato.glitch.me"></iframe>
+    </div>
+  </div>
 
-  <h2>Chat App</h2>
-  <iframe src="https://sclerenchyma.glitch.me" width="600" height="400"></iframe>
+  <div class="dropdown">
+    <button onclick="toggleDropdown('chat')">Chat App</button>
+    <div id="chat" class="dropdown-content">
+      <iframe src="https://sclerenchyma.glitch.me"></iframe>
+    </div>
+  </div>
 
-  <h2>Games</h2>
-  <iframe src="https://game-kindom.glitch.me" width="600" height="400"></iframe>
+  <div class="dropdown">
+    <button onclick="toggleDropdown('games')">Games</button>
+    <div id="games" class="dropdown-content">
+      <iframe src="https://game-kingdom.glitch.me"></iframe>
+    </div>
+  </div>
 
-  <h2>Emulator</h2>
-  <iframe src="https://chompypotato.github.io/conky-nut" width="600" height="400"></iframe>
+  <div class="dropdown">
+    <button onclick="toggleDropdown('emulator')">Emulator</button>
+    <div id="emulator" class="dropdown-content">
+      <iframe src="https://chompypotato.github.io/conky-nut"></iframe>
+    </div>
+  </div>
 
+  <script>
+    function toggleDropdown(id) {
+      const content = document.getElementById(id);
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
