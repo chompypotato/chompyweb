@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UltraViolet Proxy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+  </style>
+  <!-- Include the UltraViolet bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/@titaniumnetwork-dev/ultraviolet@3.2.10/dist/uv.bundle.min.js"></script>
+</head>
+<body>
+  <h1>UltraViolet Proxy IFrame</h1>
+  <input id="urlInput" type="url" placeholder="Enter a URL to proxy" style="width: 60%;">
+  <button id="loadProxy">Proxy URL</button>
+  <iframe id="proxyFrame" src="" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+  <script>
+    // Configure UltraViolet
+    const UV_BASE = 'https://cdn.jsdelivr.net/npm/@titaniumnetwork-dev/ultraviolet@3.2.10/dist/';
+    self.__uv$config = {
+      prefix: `${UV_BASE}service/`,
+      bare: `${UV_BASE}bare/`,
+      encodeUrl: UV.encoder.encode,
+      decodeUrl: UV.encoder.decode,
+      handler: `${UV_BASE}uv.handler.js`,
+      client: `${UV_BASE}uv.client.js`,
+    };
+
+    // Event listener for button click
+    document.getElementById('loadProxy').addEventListener('click', () => {
+      const url = document.getElementById('urlInput').value;
+      if (!url) {
+        alert('Please enter a URL');
+        return;
+      }
+
+      // Encode the URL for UltraViolet
+      const proxyUrl = `${self.__uv$config.prefix}${UV.encoder.encode(url)}`;
+
+      // Update iframe source
+      document.getElementById('proxyFrame').src = proxyUrl;
+    });
+  </script>
+</body>
+</html>
