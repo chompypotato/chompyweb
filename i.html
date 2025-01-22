@@ -36,18 +36,36 @@
       transition: background-color 0.3s, transform 0.3s;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
+.dropdown button {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
     .dropdown a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+ .dropdown button:hover {
       background-color: rgba(255, 255, 255, 0.2);
       transform: translateY(-5px);
     }
   </style>
 </head>
 <body>
-  <h1>Interstellar</h1>
+  <h1>Doge V4</h1>
   
-<button class="dropdown" onclick="openGame()">Open doge V4</button>
+<button class="dropdown" onclick="open()">Open doge V4</button>
 	<script>
-		function openGame() {
+		function open() {
 var win = window.open()
 var url = "https://schoolhouse.spanishlearning.com.ar/"
 var iframe = win.document.createElement('iframe')
