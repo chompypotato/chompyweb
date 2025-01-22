@@ -3,50 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>math | chompyweb</title>
+  <title>more math | chompyweb</title>
   <style>
-    body, html {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #FFFF00, #9D00FF);
+      color: #fff;
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       text-align: center;
     }
-    .note {
-      margin-top: 20%;
-      color: #333;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 1em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #007BFF;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
+    .dropdown {
+      margin: 1em 0;
     }
-    button:hover {
-      background-color: #0056b3;
+    .dropdown a {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
     }
   </style>
 </head>
 <body>
-  <div class="note">
-    <h1>Open Interstellar</h1>
-    <p>Please ensure your browser allows popups to open this site.</p>
-    <button onclick="openI()">Open Site</button>
-  </div>
+  <h1>Interstellar</h1>
   
-  <script>
-    function openI() {
-      const newWindow = window.open('about:blank', '_blank');
-      const siteURL = 'https://interstellar-9agac9pxm-chompypotatos-projects.vercel.app/';
-      
-      if (newWindow) {
-        newWindow.location.href = siteURL;
-      } else {
-        alert('Popups are blocked! Please allow popups for this page to open the site.');
-      }
-    }
-  </script>
+<button class="dropdown" onclick="openGame()">Open Game</button>
+	<script>
+		function openGame() {
+var win = window.open()
+var url = "https://interstellar-nkdf90pf6-chompypotatos-projects.vercel.app/"
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+}
+	</script>
+ 
 </body>
 </html>
