@@ -8,17 +8,45 @@
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
-    iframe {
+    .note {
+      margin-top: 20%;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
       border: none;
-      width: 100%;
-      height: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://interstellar-9agac9pxm-chompypotatos-projects.vercel.app/"></iframe>
+  <div class="note">
+    <h1>Open Interstellar</h1>
+    <p>Please ensure your browser allows popups to open this site.</p>
+    <button onclick="openI()">Open Site</button>
+  </div>
+  
+  <script>
+    function openI() {
+      const newWindow = window.open('about:blank', '_blank');
+      const siteURL = 'https://interstellar-9agac9pxm-chompypotatos-projects.vercel.app/';
+      
+      if (newWindow) {
+        newWindow.location.href = siteURL;
+      } else {
+        alert('Popups are blocked! Please allow popups for this page to open the site.');
+      }
+    }
+  </script>
 </body>
 </html>
