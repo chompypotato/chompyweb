@@ -25,7 +25,7 @@
     .dropdown {
       margin: 1em 0;
     }
-    .dropdown a {
+    .dropdown a, .dropdown button {
       background-color: rgba(255, 255, 255, 0.1);
       color: white;
       padding: 15px 30px;
@@ -35,26 +35,11 @@
       border-radius: 8px;
       transition: background-color 0.3s, transform 0.3s;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
     }
 
-.dropdown button {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      border-radius: 8px;
-      transition: background-color 0.3s, transform 0.3s;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-5px);
-    }
-
- .dropdown button:hover {
+    .dropdown a:hover, .dropdown button:hover {
       background-color: rgba(255, 255, 255, 0.2);
       transform: translateY(-5px);
     }
@@ -63,19 +48,23 @@
 <body>
   <h1>Doge V4</h1>
   
-<button class="dropdown" onclick="openTab()">Open doge V4</button>
-	<script>
-		function openTab() {
-var win = window.open()
-var url = "https://schoolhouse.spanishlearning.com.ar/"
-var iframe = win.document.createElement('iframe')
-iframe.style.width = "100%";
-iframe.style.height = "100%";
-iframe.style.border = "none";
-iframe.src = url
-win.document.body.appendChild(iframe)
-}
-	</script>
- 
+  <div class="dropdown">
+    <button onclick="openTab()">Open doge V4</button>
+  </div>
+
+  <script>
+    function openTab() {
+      var win = window.open();
+      var url = "https://schoolhouse.spanishlearning.com.ar/";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+  </script>
 </body>
 </html>
