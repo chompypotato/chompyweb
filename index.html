@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>chompyweb</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -18,66 +18,46 @@
       height: 100vh;
       text-align: center;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 1em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-    .dropdown {
-      margin: 1em 0;
-    }
-    .dropdown a {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 18px;
-      border-radius: 8px;
-      transition: background-color 0.3s, transform 0.3s;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    .dropdown a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-5px);
-    }
   </style>
 </head>
 <body>
-  <h1>chompyweb</h1>
+  <h1 class="text-4xl font-bold mb-6 drop-shadow-md">chompyweb</h1>
 
-  <div class="dropdown">
-    <a href="weather.html">Weather</a>
+  <div class="mb-4">
+    <a href="weather.html" class="bg-white bg-opacity-10 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-opacity-20 transition">
+      Weather
+    </a>
   </div>
 
-  <div class="dropdown">
-    <a href="chat.html">Chat</a>
+  <div class="mb-4">
+    <a href="chat.html" class="bg-white bg-opacity-10 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-opacity-20 transition">
+      Chat
+    </a>
   </div>
 
-  <div class="dropdown">
-    <a href="games.html">Games</a>
+  <div class="mb-4">
+    <a href="games.html" class="bg-white bg-opacity-10 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-opacity-20 transition">
+      Games
+    </a>
   </div>
 
-  <div class="dropdown">
-    <a href="emulator.html">Emulator</a>
+  <div class="mb-4">
+    <a href="emulator.html" class="bg-white bg-opacity-10 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-opacity-20 transition">
+      Emulator
+    </a>
   </div>
 
-
-
-  <div class="dropdown">
-    <a href="i.html">Doge</a>
+  <div class="mb-4">
+    <a href="i.html" class="bg-white bg-opacity-10 text-white px-6 py-3 rounded-lg text-lg shadow-lg hover:bg-opacity-20 transition">
+      Doge
+    </a>
   </div>
 
-<div class="group relative">
-  <button>
-  <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-  </button>
-  <span class="absolute -top-14 left-[50%] -translate-x-[50%] 
-  z-20 origin-left scale-0 px-3 rounded-lg border 
-  border-gray-300 bg-white py-2 text-sm font-bold
-  shadow-md transition-all duration-300 ease-in-out 
-  group-hover:scale-100">GitHub<span>
-</span></span></div>
+  <a href="https://github.com/chompypotato/chompyweb" 
+     target="_blank" 
+     class="fixed bottom-4 right-4 bg-white text-black px-6 py-3 rounded-lg text-lg font-bold shadow-lg hover:bg-gray-100 transition">
+    GitHub
+  </a>
 
 </body>
 </html>
