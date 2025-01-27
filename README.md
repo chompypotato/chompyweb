@@ -1,2 +1,2 @@
-i wanted to make somethin like nettleweb
-SO I DID
+<h1>HOW TO MAKE YOUR OWN LINK</h1>
+<br> <p>Fork it and deploy it through vercel or koyeb.</p>
