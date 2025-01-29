@@ -81,6 +81,10 @@
 <div class="dropdown">
     <button onclick="opentenminsTab()">10 minutes till dawn</button>
   </div>
+
+  <div class="dropdown">
+    <button onclick="open2048Tab()">2048</button>
+  </div>
   <script>
     function openslopeTab() {
       var win = window.open();
@@ -152,6 +156,19 @@ function openfnafTab() {
  function opentenminsTab() {
       var win = window.open();
       var url = "https://10-mins-till-dawn.glitch.me/";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+    function open2048Tab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/2048.html";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
