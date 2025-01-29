@@ -89,6 +89,10 @@
 <div class="dropdown">
     <button onclick="openlolTab()">1v1.lol</button>
   </div>
+
+<div class="dropdown">
+    <button onclick="openDLTab()">Ducklife</button>
+  </div>
   <script>
     function openslopeTab() {
       var win = window.open();
@@ -102,6 +106,7 @@
       win.document.body.style.height = "100vh";
       win.document.body.appendChild(iframe);
     }
+
 
  function openretrobowlTab() {
       var win = window.open();
@@ -186,6 +191,19 @@ function openfnafTab() {
 function openlolTab() {
       var win = window.open();
       var url = "https://chompypotato.github.io/chompyweb/games/1v1lol.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+function openDLTab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/ducklife.html";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
