@@ -93,6 +93,10 @@
 <div class="dropdown">
     <button onclick="openDLTab()">Ducklife</button>
   </div>
+
+<div class="dropdown">
+    <button onclick="openpsTab()">Ducklife</button>
+  </div>
   <script>
     function openslopeTab() {
       var win = window.open();
@@ -204,6 +208,19 @@ function openlolTab() {
 function openDLTab() {
       var win = window.open();
       var url = "https://chompypotato.github.io/chompyweb/games/ducklife.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+function openpsTab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/pixel-shooter.html";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
