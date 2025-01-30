@@ -117,6 +117,10 @@
 <div class="dropdown">
     <button onclick="openpsTab()">Pixel shooter</button>
   </div>
+
+  <div class="dropdown">
+    <button onclick="openfs2Tab()">Funny Shooter 2</button>
+  </div>
   
   <script>
     function openslopeTab() {
@@ -242,6 +246,19 @@ function openDLTab() {
 function openpsTab() {
       var win = window.open();
       var url = "https://chompypotato.github.io/chompyweb/games/pixel-shooter.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+  function openfs2Tab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/funny-shooter-2.html";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
