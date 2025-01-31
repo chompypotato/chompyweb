@@ -125,6 +125,10 @@
   <div class="dropdown">
     <button onclick="openidlebktTab()">Idle Breakout</button>
   </div>
+
+<div class="dropdown">
+    <button onclick="openarrasTab()">Arras.io</button>
+  </div>
   <script>
     function openslopeTab() {
       var win = window.open();
@@ -275,6 +279,19 @@ function openpsTab() {
   function openidlebktTab() {
       var win = window.open();
       var url = "https://chompypotato.github.io/chompyweb/games/idle-breakout.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+    function openarrasTab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/arras-io.html";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
