@@ -127,7 +127,11 @@
   </div>
 
 <div class="dropdown">
-    <button onclick="openarrasTab()">arras.io</button>
+    <button onclick="openarrasTab()">Arras.io</button>
+  </div>
+
+  <div class="dropdown">
+    <button onclick="openmcTab()">Minecraft 1.5.2</button>
   </div>
   <script>
     function openslopeTab() {
@@ -302,6 +306,19 @@ function openpsTab() {
       win.document.body.appendChild(iframe);
     }
 
+
+  function openmcTab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/chompyweb/games/mc1-5-2.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
   </script>
 
 
