@@ -146,6 +146,10 @@
   <div class="dropdown">
     <button onclick="opensrTab()">Slow roads</button>
   </div>
+  
+  <div class="dropdown">
+    <button onclick="openscTab()">SUPERCOLD</button>
+  </div>
   <script>
     function openslopeTab() {
       var win = window.open();
@@ -360,6 +364,19 @@ function openpsTab() {
     function opensrTab() {
       var win = window.open();
       var url = "https://chompypotato.github.io/chompyweb/games/slowroads.html";
+      var iframe = win.document.createElement('iframe');
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.src = url;
+      win.document.body.style.margin = "0";
+      win.document.body.style.height = "100vh";
+      win.document.body.appendChild(iframe);
+    }
+
+     function openscTab() {
+      var win = window.open();
+      var url = "https://chompypotato.github.io/supercold";
       var iframe = win.document.createElement('iframe');
       iframe.style.width = "100%";
       iframe.style.height = "100%";
